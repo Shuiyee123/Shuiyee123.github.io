@@ -1,0 +1,16 @@
+/* 底部毛玻璃特效 */
+#footer {
+  /* 这里的 0.2 是透明度，你可以根据自己背景图的深浅把它改成 0.1 到 0.5 */
+  background: rgba(255, 255, 255, 0.2) !important; 
+  /* 这就是毛玻璃的核心代码，10px 是模糊程度，越大越模糊 */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  /* 加一条极其微弱的顶部反光边缘，质感拉满 */
+  border-top: 1px solid rgba(255, 255, 255, 0.3); 
+}
+
+/* 适配深色模式（如果你按右下角按钮切到了黑夜模式，毛玻璃自动变暗） */
+[data-theme="dark"] #footer {
+  background: rgba(0, 0, 0, 0.3) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}

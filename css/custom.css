@@ -14,3 +14,29 @@
   background: rgba(0, 0, 0, 0.3) !important;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
+
+/* 文章卡片 hover 效果 */
+.recent-post-item {
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+.recent-post-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .12);
+}
+
+/* 文章内图片圆角 */
+#article-container img {
+  border-radius: 12px;
+}
+
+/* 文字选中颜色 */
+::selection {
+  background: rgba(73, 177, 245, .35);
+  color: inherit;
+}
+
+/* 深色模式下用深色渐变替代背景图，减少视觉干扰 */
+[data-theme="dark"] #web_bg {
+  background-image: linear-gradient(160deg, #0f172a 0%, #1e293b 100%) !important;
+}
+
